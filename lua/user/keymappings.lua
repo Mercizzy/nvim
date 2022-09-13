@@ -15,7 +15,8 @@ keymap("n", "<leader><CR>", "<cmd>lua ReloadConfig()<CR>", opts)
 -- Defx
 keymap("n", "<Leader>e", ":<C-U>Defx<CR>", opts)
 
-keymap("n", "sf", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "ss", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "sf", "<cmd>Telescope git_files<cr>", opts)
 keymap("n", "sg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "sb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "sh", "<cmd>Telescope help_tags<cr>", opts)

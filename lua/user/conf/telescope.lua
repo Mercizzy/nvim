@@ -54,12 +54,17 @@ telescope.setup {
   },
   pickers = {
     find_files = {
-      theme = "dropdown",
-      previewer = false,
+      -- theme = "dropdown",
+      -- previewer = false,
       -- find_command = { "find", "-type", "f" },
       find_command = { "fd", "-H" , "-I"},  -- "-H" search hidden files, "-I" do not respect to gitignore
     },
-
+    git_files = {
+      theme = "dropdown",
+      previewer = false,
+      -- find_command = { "find", "-type", "f" },
+      -- find_command = { "fd", "-H" , "-I"},  -- "-H" search hidden files, "-I" do not respect to gitignore
+    },
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
