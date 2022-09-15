@@ -80,6 +80,11 @@ return packer.startup(function(use)
     'numToStr/Comment.nvim',
   }
 
+  -- Prettier
+  use "MunifTanjim/prettier.nvim"
+
+  use "jiangmiao/auto-pairs"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

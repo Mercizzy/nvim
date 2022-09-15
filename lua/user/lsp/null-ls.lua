@@ -16,7 +16,7 @@ null_ls.setup({
 	sources = {
 		formatting.autopep8, -- for python
 		formatting.stylua,     -- for lua
-
+    diagnostics.eslint,
     -- diagnostics.flake8,
 
     completion.spell,
@@ -28,14 +28,14 @@ null_ls.setup({
       --
       -- end
       -- auto format when save file
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd([[
-            augroup LspFormatting
-            autocmd! * <buffer>
-            autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-            augroup END
-            ]])
-    end
+    -- if client.resolved_capabilities.document_formatting then
+    --   vim.cmd([[
+    --         augroup LspFormatting
+    --         autocmd! * <buffer>
+    --         autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+    --         augroup END
+    --         ]])
+    -- end
   end,
 })
 

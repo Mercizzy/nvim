@@ -9,7 +9,11 @@ keymap("", ";", "<Nop>", opts)
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
+keymap('n', '<C-S>', [[<cmd>w!<cr>]], { noremap = true })
+keymap('i', '<C-S>', [[<C-C><cmd>w!<cr>]], { noremap = true })
+keymap('v', '<C-S>', [[<C-C><cmd>w!<cr>]], { noremap = true })
 keymap("i", "jk", "<Esc>", opts)
+keymap("i", "<C-c>", "<Esc>", opts)
 
 keymap("n", "<leader><CR>", "<cmd>lua ReloadConfig()<CR>", opts)
 -- Defx
