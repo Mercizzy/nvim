@@ -17,7 +17,9 @@ keymap("i", "<C-c>", "<Esc>", opts)
 
 keymap("n", "<leader><CR>", "<cmd>lua ReloadConfig()<CR>", opts)
 -- Defx
-keymap("n", "<Leader>e", ":<C-U>Defx<CR>", opts)
+-- keymap("n", "<Leader>e", ":<C-U>Defx<CR>", opts)
+keymap("n", "_", ":Defx -search=`expand('%:p')` -show-ignored-files<CR>", opts)
+keymap("n", "-", ":Defx `expand('%:p:h')` -search=`expand('%:p')` -show-ignored-files<CR>", opts)
 
 keymap("n", "ss", "<cmd>Telescope find_files<cr>", opts)
 keymap("n", "sf", "<cmd>Telescope git_files<cr>", opts)

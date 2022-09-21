@@ -26,6 +26,10 @@ local function jumpable(dir)
       return false
     end
 
+    if not node.parent then
+      return false
+    end
+
     local snip_begin_pos, snip_end_pos = node.parent.snippet.mark:pos_begin_end()
     local pos = win_get_cursor(0)
     pos[1] = pos[1] - 1 -- LuaSnip is 0-based not 1-based like nvim for rows

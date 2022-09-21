@@ -75,15 +75,18 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
-  -- COMMENT
-  use {
-    'numToStr/Comment.nvim',
-  }
+  --注释插件
+  use "b3nj5m1n/kommentary"
+  --jsx注释
+  use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Prettier
   use "MunifTanjim/prettier.nvim"
 
   use "jiangmiao/auto-pairs"
+
+  -- Other 
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

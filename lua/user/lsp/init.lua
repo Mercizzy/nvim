@@ -16,3 +16,6 @@ vim.cmd [[
 vim.cmd [[
   autocmd BufWritePre *.json,*.jsonc lua vim.lsp.buf.formatting_sync()
 ]]
+vim.cmd [[
+  autocmd FileType apache setlocal commentstring=#\ %s
+]]
